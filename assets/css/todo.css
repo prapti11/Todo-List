@@ -1,0 +1,132 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #dfe6e9;
+	font-family: 'Roboto', sans-serif;
+}
+header{
+	background-color: #ff4757; 
+	height: 80px;
+	padding: 20px;
+}
+header input[type=text]{
+	border:none;
+	outline: none;
+	text-indent: 10px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	background-color: rgba(178, 190, 195,0.6) ;
+	color: #fff;
+	height: 40px;
+	position: relative;
+	width:100%;
+	padding: 10px;
+}
+::placeholder{
+	color:#fff;
+}
+#add{
+	position: absolute;
+	border:none;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	background-color: transparent;
+	width: 40px;
+	height: 40px;
+	top: 20px;
+	right: 20px;
+	outline: none;
+	cursor: pointer;
+}
+#add .fa{
+  background-color: transparent;
+  font-size: 30px;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.container{
+	width: 100%;
+	padding: 10px;
+}
+ul.todo{
+	width: 100%;
+}
+ul.todo li{
+	background-color: #fff;
+	list-style: none;
+	border-radius: 6px;
+	padding: 10px;
+	margin :20px 0 0 0;
+	height: 50px;
+	position: relative;
+}
+ul.todo li .buttons{
+	width: 100px;
+	height: 50px;
+	top: 0px;
+	right: 10px;
+	position: absolute;
+	background-color: transparent;
+}
+ul.todo button{
+	position: relative;
+	background:none;
+	outline: none;
+	padding: 10px;
+	border:0px;
+	cursor: pointer;
+}
+ul.todo button .fa{
+    background:none;
+	cursor: pointer;
+	font-size: 20px
+}
+ul.todo button .fa-trash-o:hover{
+	color: red;
+}
+ul.todo button .fa-check-circle-o:hover{
+     color: green;
+}
+.todo li button:last-of-type:before{
+	content: '';
+	width: 1px;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	background-color: black;
+}
+ul.todo#completed:not(:empty){
+	padding: 60px 0 0 0;
+	position: relative;
+}
+ul.todo#todo:empty:after{
+	content: "You don't have any task to be completed.";
+	color: #95a5a6;
+	margin-bottom: 20px;
+	border-bottom:1px solid #95a5a6;
+	padding: 10px;
+	display: block;
+	text-align: center;
+}
+ul.todo#completed:empty:after{
+	content: "You have yet to complete any task.";
+	color: #95a5a6;
+	display:block;
+	margin-top: 20px;
+	text-align: center;
+}
+ul.todo#completed:not(:empty):before{
+	content:'';
+	width: 160px;
+	height: 1px;
+	background:#95a5a6;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	margin: 0 0 0 -75px;
+}
